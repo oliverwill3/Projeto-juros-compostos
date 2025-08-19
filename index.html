@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador Financeiro</h1>
+        
+        <nav>
+            <button id="show-main-page">Simulador</button>
+            <button id="show-config-page">Configurações</button>
+            <button id="show-notes-page">Anotações</button>
+        </nav>
+
+        <div id="main-page">
+            <div class="summary-panels">
+                <div class="panel final-balance-panel">
+                    <span>Saldo Final Real:</span>
+                    <span id="final-balance-display">R$ 0,00</span>
+                </div>
+                <div class="panel final-meta-panel">
+                    <span>Saldo Final de Meta:</span>
+                    <span id="final-meta-display">R$ 0,00</span>
+                </div>
+                <div class="panel performance-panel">
+                    <span>Performance Acumulada:</span>
+                    <span id="performance-display">R$ 0,00</span>
+                </div>
+            </div>
+
+            <button id="toggle-values">Esconder Valores</button>
+
+            <table id="simulation-table">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Saldo Inicial</th>
+                        <th>Ganho/Perda Meta</th>
+                        <th>Resultado do Dia</th>
+                        <th>Diferença da Meta</th>
+                        <th>Status do Dia</th>
+                        <th>Saldo Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <div id="config-page" class="hidden">
+            <div class="config-panel">
+                <h2>Configurações do Simulador</h2>
+                <div class="config-group">
+                    <label for="initial-balance">Saldo Inicial:</label>
+                    <input type="number" id="initial-balance" value="200">
+                </div>
+                <div class="config-group">
+                    <label for="num-days">Número de Dias:</label>
+                    <input type="number" id="num-days" value="10">
+                </div>
+                <div class="config-group">
+                    <label for="gain-rate">Meta de Ganho Diário (%):</label>
+                    <input type="number" id="gain-rate" value="20">
+                </div>
+                <div class="config-group">
+                    <label for="loss-rate">Limite de Perda Diária (%):</label>
+                    <input type="number" id="loss-rate" value="10">
+                </div>
+            </div>
+        </div>
+
+        <div id="notes-page" class="hidden">
+            <div class="notes-panel">
+                <h2>Bloco de Anotações</h2>
+                <p>Aqui você pode anotar suas estratégias e pensamentos. Clique em salvar para que sejam guardados de forma segura.</p>
+                <div class="notes-group">
+                    <label for="note-title">Título da Anotação:</label>
+                    <input type="text" id="note-title" placeholder="Ex: Estratégia da Semana">
+                </div>
+                <div class="notes-group">
+                    <label for="note-content">Conteúdo:</label>
+                    <textarea id="note-content" rows="10" placeholder="Digite sua anotação aqui..."></textarea>
+                </div>
+                <button id="save-note">Salvar Anotação</button>
+                <div id="note-status-message" class="status-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
