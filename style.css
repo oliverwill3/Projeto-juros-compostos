@@ -1,0 +1,130 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1300px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+}
+
+.config-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #e2e6ea;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.config-panel h2 {
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.config-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.config-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.config-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.summary-panels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.panel {
+    background-color: #e9ecef;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-weight: bold;
+    flex: 1;
+    margin: 5px;
+}
+
+.final-balance-panel {
+    color: #008000;
+}
+
+.final-meta-panel {
+    color: #1a73e8;
+}
+
+.performance-panel {
+    background-color: #e9ecef;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-weight: bold;
+    flex: 1;
+    margin: 5px;
+}
+
+#performance-display {
+    transition: color 0.3s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #0056b3;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.daily-result-input {
+    width: 80px;
+    text-align: center;
+}
+
+.daily-diff-cell {
+    font-weight: bold;
+    color: #333;
+}
